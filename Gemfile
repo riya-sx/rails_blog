@@ -25,6 +25,10 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+gem 'cancancan'
+
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -65,3 +69,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'devise'
+gem 'jquery-rails'
+
+gem 'dotenv', groups: [:development, :test]
+gem 'sendgrid'
+gem 'pg'

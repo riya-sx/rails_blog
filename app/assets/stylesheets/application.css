@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+/* application.css */
+
+/* Styles for the footer */
+footer {
+    background-color: #333; /* Background color of the footer */
+    color: #fff; /* Text color of the footer */
+    padding: 5px; /* Padding around the content within the footer */
+    text-align: center; /* Center-align the text within the footer */
+  }
+  
+  /* Optionally, you can add styles for links within the footer */
+  footer a {
+    color: #fff; /* Link color */
+    /* Remove underline from links */
+  }
+ 
+  /* Optionally, add additional styles for specific elements within the footer */
+  
+  .signupForm input{
+    outline: none;
+  }

@@ -1,5 +1,12 @@
+<div style="position: absolute; top: 0; left: 0;">
+  <%= link_to "Back to Homepage", articles_path , class: "btn btn-secondary" ,:remote => true %>
+</div>
+
 <h1><%= @article.title %></h1>
+
 <p><%= @article.body %></p>
+
+
 
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
@@ -8,6 +15,7 @@
                     turbo_confirm: "Are you sure?"
                   } %></li>
 </ul>
+
 
 <h2>Comments</h2>
 <%= render @article.comments %>

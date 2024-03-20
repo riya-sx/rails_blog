@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #ffc0cb;">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">USER</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        <button class="btn btn-outline-success" type="submit"><%= link_to "New Article", new_article_path %> </button>
+        </li>
+
+   <li class="nav-item">
+   <%= link_to 'Edit Profile', edit_user_registration_path,class: "nav-link" %>
+   </li>
+        
+   <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true"></a>
+        </li>
+       
+      </ul>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" type="submit"><%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete },class: "nav-link" %></button>
+        
+        </form>
+    </div>
+  </div>
+</nav>
