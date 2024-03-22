@@ -27,6 +27,7 @@ Our blog has <%= Article.public_count %> articles and counting!
     <th style='border:4px solid green'><%= link_to "Created by", :sort => " current_user.email"%> </th>
     <th style ='border:4px solid green', > Created At</th>
     <th style='border:4px solid green'> Action  Performed</th>
+     
 
 
   </tr>
@@ -39,7 +40,7 @@ Our blog has <%= Article.public_count %> articles and counting!
    <%end%>
 
     </td>
-    <td style = 'border:4px solid green'><%= link_to "(#{article.created_at.strftime('%B %d, %Y')})", article %>
+    <td style = 'border:4px solid green'><%= link_to "#{article.created_at.strftime('%B %d, %Y')})", article %>
     <td style= 'border:4px solid green'> <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary btn-sm" %>
      <%= link_to "Destroy", article_path(article), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
      <button type="button" class= "btn btn-danger removeArticle" id="article_<%=article.id%>">Destroy(ajax)</button>

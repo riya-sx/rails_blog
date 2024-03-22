@@ -71,8 +71,16 @@ group :test do
 end
 
 gem 'devise'
-gem 'jquery-rails'
+
 
 gem 'dotenv', groups: [:development, :test]
 gem 'sendgrid'
 gem 'pg'
+gem 'spreadsheet'
+gem 'prawn'
+gem 'prawn-table', '~> 0.1.0'
+
+gem 'dartsass-sprockets'
+gem 'bootstrap', '~> 5.3.2'
+
+gem 'jquery-rails'

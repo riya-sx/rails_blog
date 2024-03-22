@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_18_095505) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_21_105746) do
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -56,7 +56,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_18_095505) do
     t.datetime "updated_at", null: false
     t.string "status"
     t.integer "user_id"
+    t.bigint "parent_comment_id"
     t.index ["article_id"], name: "index_comments_on_article_id"
+    t.index ["parent_comment_id"], name: "index_comments_on_parent_comment_id"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -71,6 +73,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_18_095505) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "role", default: 0
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
@@ -79,4 +83,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_18_095505) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "comments", column: "parent_comment_id"
 end

@@ -27,7 +27,7 @@ development:
     host: localhost
     password: Riya@123
     adapter: postgresql
-    migrations_path: db/riya_migrate
+    migrations_paths: db/riya_migrate
   # database: project_mysql_development
 
 # Warning: The database defined as "test" will be erased and
